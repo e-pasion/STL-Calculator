@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="stl_viewer/stl_viewer.min.js"></script>
+</head>
+<body style="background-image: url(img/AVA\ 3D.png);background-position: center center;background-repeat: no-repeat;background-size: cover;">
+    
+<nav class="bg-transparent border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AVA3D</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-yellow-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Inicio</a>
+          </li>
+          <li>
+            <a href="carrito.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diseños</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Calculadora</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Guia</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="flex  pt-20 mb-20 mt-5 bg-white bg-opacity-80 justify-center" style="width: 80%;margin-left: 10%; height: 630px;">
+
+        <div class="bg-yellow-200 h-3/4 w-1/2 mx-20 flex justify-center items-center flex-col" id="contenedor" >
+            <input type="file" name="" id="fileSelector">
+            <img src="img/loading.gif" id="load" class="w-1/2 h-3/6 hidden" alt="">
+        </div>
+        <div class="w-80">
+            2.Material
+            <label for="sm" class="sr-only">Underline select</label>
+            <select disabled id="sm" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected disabled>Seleccione un material:</option>
+            </select>
+            <br>
+            <h5>3.Color</h5>
+            <label for="sc" class="sr-only">Underline select</label>
+            <select id="sc" disabled class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+                <option selected disabled>Seleccione un color:</option>
+            </select>
+            <br>
+            <label for="rellenoRange" class="block mb-2">4.Relleno</label>
+
+            <div class="flex justify-center">
+            <input disabled id="rellenoRange" type="range" min="10" max="100" value="50" step="10" class="mt-2 mx-2 w-full h-2 bg-yellow-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+            <h4 id="nr" >50%</h4>
+
+            
+        </div>
+        <br>
+            <h5>5.Tamaño</h5>
+            
+            <div class="flex justify-center">
+                <input disabled  id="sizeRange" type="range" min="0.5" max="1.5" value="1" step="0.05" class="mt-2 mx-2 w-full h-2 bg-yellow-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 border-black">
+                <h4 class="w-10" id="sr" >100%</h4>
+    
+                
+            </div>
+            <div class="flex justify-center mt-4">
+                <h3>X:</h3>
+                <input disabled type="number" class="bg-gray-50 w-20 h-8 mx-2 text-center" step="0.1" name="" id="x">
+                <h3>Y:</h3>
+                <input disabled type="number" class="bg-gray-50 w-20 mx-2 text-center" step="0.1" name="" id="y">
+                <h3>Z:</h3>
+                <input disabled type="number" class="bg-gray-50 w-20 mx-2 text-center" step="0.1" name="" id="z">
+            </div>
+            <br>
+            <h5>Precio:</h5>
+            <h5 id="price">0$</h5>
+            <br>
+            <button disabled id="xd" type="button" class="text-black bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 disabled:bg-yellow-200">Comprar</button>
+        </div>
+    </div>
+    <script src="stl_view.js"></script>
+    <script src="stl.js"></script>
+    <script src="stl_calculator.js"></script>
+</body>
+</html>

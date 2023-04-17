@@ -1,0 +1,14 @@
+/* Para Chrome y Safari */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #000000 !important;
+  }
+  
+  /* Para Firefox */
+  input[type=range]::-moz-range-thumb {
+    background-color: #000000 !important;
+  }
+  
+  /* Para Internet Explorer y Edge */
+  input[type=range]::-ms-thumb {
+    background-color: #000000 !important;
+  }
