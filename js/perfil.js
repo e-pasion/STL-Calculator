@@ -1,4 +1,4 @@
-const verCarrito= async ()=>{
+const datosPerfil= async ()=>{
     var url= await fetch("http://localhost:9020/api/carrito",{
         headers:{
             "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -42,4 +42,8 @@ const verCarrito= async ()=>{
 
 } 
 
-verCarrito();
+
+document.getElementById("logout").addEventListener(("click"),()=>{
+    localStorage.removeItem("token");
+    window.top.location.href = "login.html";
+})

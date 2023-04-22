@@ -63,7 +63,7 @@ const verMateriales= async()=>{
         alert(encontrado.materialColorId)
 
         enviar={
-        "peso": getPrecio(),
+        "peso": getPeso(),
         "estado": "Carrito",
         "tamX":tX.value,
         "tamY": tY.value,
@@ -83,6 +83,9 @@ const verMateriales= async()=>{
         formData.append('json', JSON.stringify(enviar));
         
         fetch('http://localhost:9020/api/producto', {
+          headers:{
+            "Authorization":`Bearer ${localStorage.getItem('token')}`
+          },
           method: 'POST',
           body: formData
         })
